@@ -1,0 +1,36 @@
+/* Simple Spotify-like dark UI */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+:root{--bg:#121212;--surface:#181818;--muted:#b3b3b3;--accent:#1db954}
+body{background:var(--bg);color:#fff;min-height:100vh}
+.app{display:flex;gap:24px;padding:24px}
+.sidebar{width:220px;background:linear-gradient(180deg,#0f0f0f, #171717);padding:20px;border-radius:8px}
+.brand{font-size:20px;margin-bottom:16px}
+.sidebar nav a{display:block;padding:8px 0;color:var(--muted);cursor:pointer}
+.sidebar nav a.active{color:#fff;font-weight:600}
+.playlists{margin-top:18px}
+.playlists h2{font-size:13px;color:var(--muted);margin-bottom:8px}
+.playlists ul{list-style:none}
+.playlists li{padding:6px 0;color:var(--muted);font-size:14px}
+.main{flex:1}
+.header h2{font-size:28px;margin-bottom:16px}
+.cards{display:flex;gap:16px;margin-bottom:20px}
+.card{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.03), transparent);padding:12px;border-radius:8px;width:220px}
+.cover{width:64px;height:64px;border-radius:6px}
+.card-info h3{font-size:16px}
+.card-info p{font-size:13px;color:var(--muted)}
+.tracks h3{margin-bottom:8px}
+.tracks ul{list-style:none}
+.tracks li{display:flex;align-items:center;padding:12px;border-radius:6px;color:var(--muted);gap:12px}
+.track-index{width:24px;text-align:center;color:var(--muted)}
+.track-meta{flex:1}
+.track-title{color:#fff}
+.track-artist{font-size:13px;color:var(--muted)}
+.track-duration{width:48px;text-align:right;color:var(--muted)}
+.player{position:fixed;left:24px;right:24px;bottom:16px;height:72px;background:var(--surface);border-radius:8px;display:flex;align-items:center;padding:12px;gap:12px}
+.player-left{display:flex;align-items:center;gap:12px}
+.now-playing-cover{width:48px;height:48px;background:linear-gradient(135deg,#1db954,#11998e);border-radius:4px}
+.now-playing-info .song{font-weight:600}
+.player-controls{display:flex;gap:8px;align-items:center}
+.player-controls button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;padding:8px 12px;border-radius:6px;cursor:pointer}
+.player-right{margin-left:auto;color:var(--muted)}
+@media(max-width:800px){.app{flex-direction:column}.sidebar{width:100%}}
